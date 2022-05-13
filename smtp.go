@@ -2,6 +2,7 @@ package sender
 
 import (
 	"context"
+	"fmt"
 	"github.com/aaronland/gomail/v2"
 	"net/url"
 	"strconv"
@@ -29,7 +30,7 @@ func NewSMTPSender(ctx context.Context, uri string) (gomail.Sender, error) {
 	u, err := url.Parse(uri)
 
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("Failed to parse URI, %w", err)
 	}
 
 	q := u.Query()
@@ -42,8 +43,7 @@ func NewSMTPSender(ctx context.Context, uri string) (gomail.Sender, error) {
 	port, err := strconv.Atoi(str_port)
 
 	if err != nil {
-		return nil, err
-
+		return nil, fmt.Errorf("Failed to parse port number, %w", err)
 	}
 
 	d := gomail.NewDialer(host, port, username, password)
