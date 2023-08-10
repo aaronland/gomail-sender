@@ -2,8 +2,9 @@ package sender
 
 import (
 	"context"
-	"github.com/aaronland/gomail/v2"
 	"testing"
+
+	"github.com/aaronland/gomail/v2"
 )
 
 func TestStdoutSender(t *testing.T) {

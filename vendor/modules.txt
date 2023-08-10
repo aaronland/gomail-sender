@@ -1,8 +1,9 @@
 # github.com/aaronland/go-roster v1.0.0
-## explicit
+## explicit; go 1.16
 github.com/aaronland/go-roster
 # github.com/aaronland/gomail/v2 v2.0.8
-## explicit
+## explicit; go 1.16
 github.com/aaronland/gomail/v2
 # gopkg.in/alexcesaro/quotedprintable.v3 v3.0.0-20150716171945-2caba252f4dc
+## explicit
 gopkg.in/alexcesaro/quotedprintable.v3
